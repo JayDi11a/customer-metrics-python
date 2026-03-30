@@ -30,34 +30,11 @@ get_customer_metrics(data, from_, to, min_total_spend=None)
 
 ## Setup
 
-Create a virtual environment
-
 ```bash
-python -m venv venv
-```
+# Install uv (if not already installed)
+curl -LsSf https://astral.sh/uv/install.sh | sh  # Mac/Linux
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"  # Windows
 
-Activate it
-
-Mac/Linux
-
-```bash
-source venv/bin/activate
-```
-
-Windows
-
-```bash
-venv\Scripts\activate
-```
-
-Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-Run tests
-
-```bash
-pytest
+# Run tests (automatically creates venv and installs dependencies)
+uv run pytest
 ```
