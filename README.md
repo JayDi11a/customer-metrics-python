@@ -30,11 +30,15 @@ get_customer_metrics(data, from_, to, min_total_spend=None)
 
 ## Setup
 
+**Install uv** (if not already installed):
 ```bash
-# Install uv (if not already installed)
 curl -LsSf https://astral.sh/uv/install.sh | sh  # Mac/Linux
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"  # Windows
+```
 
-# Run tests (automatically creates venv and installs dependencies)
+**Clone and run tests**:
+```bash
+git clone https://github.com/snevans7-commits/customer-metrics-python.git
+cd customer-metrics-python
 uv run pytest
 ```
